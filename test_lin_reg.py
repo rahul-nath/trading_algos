@@ -1,5 +1,5 @@
 """
-Test a learner.  (c) 2015 Tucker Balch
+Test a Linear Regression Learner
 """
 
 import numpy as np

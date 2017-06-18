@@ -1,3 +1,12 @@
+"""
+(c) 2017 Rahul Nath
+This program implements the formulas for several financial
+indicators: Price/Simple Moving Average ratios, bollinger bands
+and the Williams Price Ratio. They indicate volatility in the
+market.
+"""
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np

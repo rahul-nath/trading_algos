@@ -1,5 +1,5 @@
 """
-A simple wrapper for linear regression.  (c) 2015 Tucker Balch
+Linear Regression wrapper, (c) 2017 Rahul Nath
 """
 
 import numpy as np
@@ -33,6 +33,3 @@ class LinRegLearner(object):
         @returns the estimated values according to the saved model.
         """
         return (self.model_coefs[:-1] * points).sum(axis = 1) + self.model_coefs[-1]
-
-if __name__=="__main__":
-    print "the secret clue is 'zzyzx'"

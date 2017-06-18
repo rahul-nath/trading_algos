@@ -136,10 +136,3 @@ class CRLearner(object):
         self.a = next_action
           
         return action
-
-
-    def author(self):
-        return "rnath9"
-
-if __name__=="__main__":
-    print "Yann Lecun was here"

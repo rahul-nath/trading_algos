@@ -1,5 +1,10 @@
 """
-Template for implementing StrategyLearner  (c) 2016 Tucker Balch
+(c) 2017 Rahul Nath
+
+This program learns a trading policy using a QLearner
+(Reinforcement Learning algorithm). It uses financial
+indicators that are discretized into bins.
+
 """
 
 import datetime as dt
@@ -133,24 +138,6 @@ class StrategyLearner(object):
                 actions.append(self.learner.query(state, reward))
                 shares, holdings = self.simulate_trade(actions[-1], holdings)
 
-                # here we're simulating the newest trade, using the 
-                #today_price = prices.ix[day, 0]
-
-                #port_val.append(port_val[-1] + (-shares)*today_price)
-
-
-
-
-            # it may take longer if you don't converge, but you get much better return
-            """
-            if port_val[-1] <= last_return:
-                convergence_count += 1
-                if convergence_count == 10:
-                    break
-            elif convergence_count > 0:
-                convergence_count -= 1                
-            last_return = port_val[-1]
-            """
             iterations -= 1
             if self.verbose: print port_val[-1]
 

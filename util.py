@@ -1,4 +1,6 @@
-"""MLT: Utility code."""
+"""
+Functions to make reading data easier
+"""
 
 import os
 import pandas as pd

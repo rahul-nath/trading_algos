@@ -1,5 +1,5 @@
 """
-Test a learner.  (c) 2015 Tucker Balch
+Test a Random Tree learner.
 """
 
 import numpy as np

@@ -8,6 +8,8 @@ Note the code only works for environments with discrete action space and
 continuous observation space.
 https://github.com/FlankMe/general-gym-player
 @author: Riccardo Rossi
+
+Edited 2017, Rahul Nath
 """
 
 # Choice of the game and definition of the goal

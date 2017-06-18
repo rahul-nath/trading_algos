@@ -1,4 +1,5 @@
 """
+
 The general game player implements the Q-learning method with minibatches
 """
 class Agent():

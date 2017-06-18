@@ -1,5 +1,5 @@
 """
-Test a CR Learner in a navigation problem.  (c) 2017 Tucker Balch
+Test a CR Learner in a navigation problem.
 """
 
 import numpy as np

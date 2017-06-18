@@ -1,6 +1,14 @@
 from numpy import random
 import numpy as np
 
+"""
+Implementation of Adele Cutler's Random Tree Learner,
+(https://www.researchgate.net/publication/268424569_PERT-perfect_random_tree_ensembles)
+
+Something wrong with the query method -- learner should overfit perfectly with in-sample
+data, but currently has only 92% - 94% accuracy.
+"""
+
 class RTLearner:
 
     def __init__(self, leaf_size=1, verbose=False):
@@ -67,20 +75,3 @@ class RTLearner:
                 else: 
                     index += self.tree[index][3]
         return result
-"""
-I had similar issue, but I was using a random choice which was inclusive and I would go out of bounds every time on 11. 
-I fixed my code which looks like yours (getting i).
-Once that was fixed I got the same error but now it was on the row index, I made sure I took 2 random samples w/o 
-replacement using random choice, w/ replace=False. This did not resolve it.
-After much head ache I focused on my code where I detect leaf and empty data:
-first check if number of rows in data == 0  return an n.array [[...]]  (note the double sqr bracket, 
-I had single brackets and that was my issue)
-else  if number of rows in data == 1 return an np.array [[...]] (a leaf)  
-else if number of rows in data <= leaf_size or if all reminder Y's are the same - min(data[:, -1]) == max(data[:, -1]) return a leaf where the Y value is the mean of all Ys in that set
- 
-make sure when you return left and right trees you are always using np.arrays
- 
-make sure root is np.array  -  use [[....]] (double brackets)
- 
-make sure you concatenate or vstack in the correct order root-left-right 
-"""

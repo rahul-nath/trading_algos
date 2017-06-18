@@ -1,6 +1,5 @@
 """
-Test a Q Learner in a navigation problem.  (c) 2015 Tucker Balch
-2016-10-20 Added "quicksand" and uncertain actions.
+Test a Q Learner in a navigation problem.
 """
 
 import numpy as np
